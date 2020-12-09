@@ -48,4 +48,4 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >由於Soc電路較大，需要對設計進行劃分，但是各區塊的設計者往往無法得知其他區塊的輸入輸出delay，因此我們採用time bugeting的設計方法:
 >- time bugeting: 假設輸入和輸出內部電路各占用工作週期的40%
 >- 即:Tclk = Tcq+Tcomb_X+Tcomb_Y+Tsetup (此處不考慮Tskew)，其中Tcomb_X,Y分別佔用工作週期的40%，因此工作週期剩下的20%包含了Tcq,Tsetup
->- 則margin定義為20%Tclk-Tcq-Tsetup
+>- 則margin(餘量)定義為20%Tclk-Tcq-Tsetup
