@@ -34,4 +34,5 @@ Synthetic library: Synopsys Designware的IP庫<br>
 ## 約束: 輸入端口到暫存器之間路徑的約束
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/block.png)
 >由於我們要合成的對象是灰色方塊中的組合邏輯N，但要分析其時序約束條件必須將外部的時序電路同時考慮進去:
->- (Tclk+Tskew)-(Tcq+Tcomb_M+Tcomb_N) > Tsetup \righarrow
+>- 由方塊圖可以看出約束式: (Tclk+Tskew)-(Tcq+Tcomb_M+Tcomb_N) > Tsetup
+>- 因此我們可以推導出合成組合邏輯N的約束條件: (Tclk+Tskew)-(Tcq+Tcomb_M) > Tsetup+Tcomb_N，故DC會依照組合邏輯N的延遲條件優化。
