@@ -43,6 +43,11 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >- 由方塊圖可以看出約束式: (Tclk+Tskew)-(Tcq+Tcomb_S+Tcomb_T) > Tsetup
 >- 因此我們可以推導出合成組合邏輯N的約束條件: (Tclk+Tskew)-(Tcq+Tcomb_T) > Tsetup+Tcomb_S，故DC會依照組合邏輯N的延遲條件優化。
 >- 我們可以合理設置不確定時間(δ)以及指定Tskew與外部延遲(Tcq, Tcomb_T)，可以得到: Tcomb_S_max=Tclk+Tskew-(Tcq+Tcomb_T)-δ-Tsetup
+## 約束: 模組中組合邏輯的路徑約束 (模組中包含clock)
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im6.png)<br>
+>Tcomb_F=Tclk-Tinput_delay-Toutput_delay
+>>**set_input_delay 0.4 -clock CLK -add_delay \[get_ports B]
+>>set_output_delay 0.2 -clock CLK -add_delay \[get_ports D]**
 # time bugeting (時間預算)
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im4.png)<br>
 >由於Soc電路較大，需要對設計進行劃分，但是各區塊的設計者往往無法得知其他區塊的輸入輸出delay，因此我們採用time bugeting的設計方法:
