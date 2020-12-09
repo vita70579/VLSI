@@ -22,4 +22,4 @@ Synthetic library: Synopsys Designware的IP庫<br>
   - hold time: edge觸發後資料須保持一段時間
   - metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
 >約束:<br>
-![Image](https://github.com/vita70579/VLSI/raw/master/Image/two_stage_DFF.png) 
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png) 
