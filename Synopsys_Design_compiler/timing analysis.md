@@ -46,6 +46,14 @@ Synthetic library: Synopsys Designware的IP庫<br>
 # time bugeting (時間預算)
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im4.png)<br>
 >由於Soc電路較大，需要對設計進行劃分，但是各區塊的設計者往往無法得知其他區塊的輸入輸出delay，因此我們採用time bugeting的設計方法:
->- time bugeting: 假設輸入和輸出內部電路各占用工作週期的40%
->- 即:Tclk = Tcq+Tcomb_X+Tcomb_Y+Tsetup (此處不考慮Tskew)，其中Tcomb_X,Y分別佔用工作週期的40%，因此工作週期剩下的20%包含了Tcq,Tsetup
->- 則margin定義為20%Tclk-Tcq-Tsetup
+>- time bugeting: 假設輸入和輸出「內部電路」各占用工作週期的40%
+>- 即:Tclk = Tcq+Tcomb_?+Tcomb_N+Tsetup (此處不考慮Tskew)
+>- 若Tcomb_?,N分別佔用工作週期的40%，則工作週期剩下的20%包含了Tcq,Tsetup，可以定義margin(餘量)為:20%Tclk-Tcq-Tsetup
+### 例子:
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im5.png)<br>
+因假設輸入/輸出內部電路佔40%Tclk (Tclk=10ns)，因此可以設定外部延遲為10-40%Tclk=6ns<br>
+>>>**create_clock -period 10 \[get-ports CLK]<br>
+>>>set_input_delay -max 6 -clock CLK \[all_inputs]<br>
+>>>remove_input_delay \[get ports CLK]<br>
+>>>set_output_delay -max 6 -clock CLK \[all-putput]<br>**
+
