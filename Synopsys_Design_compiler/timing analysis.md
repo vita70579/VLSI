@@ -17,9 +17,9 @@ Synthetic library: Synopsys Designware的IP庫<br>
   >>- 因此，timing path可以是輸入到暫存器/暫存器到暫存器/暫存器到輸出/輸入到輸出<br>
   >>- critical path: 最長的一條timing path。
 # timing violation
-定義:<br>
+>定義:<br>
   - setup time: edge到來前資料須穩定一段時間
   - hold time: edge觸發後資料須保持一段時間
   - metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
-約束:<br>
-![Image](https://github.com/vita70579/VLSI/raw/master/Approximate%20averaging/Synopsys_Design_compiler/Image/two_stage_DFF.png) 
+>約束:<br>
+![Image](https://github.com/vita70579/VLSI/raw/master/Image/two_stage_DFF.png) 
