@@ -52,7 +52,7 @@ Synthetic library: Synopsys Designware的IP庫<br>
 ### 例子:
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im5.png)<br>
 因假設輸入/輸出內部電路佔40%Tclk (Tclk=10ns)，因此可以設定外部延遲為10-40%Tclk=6ns<br>
-**>>create_clock -period 10 \[get-ports CLK]<br>
+>>**create_clock -period 10 \[get-ports CLK]<br>
 >>set_input_delay -max 6 -clock CLK \[all_inputs]<br>
 >>remove_input_delay \[get ports CLK]<br>
 >>set_output_delay -max 6 -clock CLK \[all-putput]<br>**
