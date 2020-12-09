@@ -24,6 +24,5 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >約束:<br>
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png)
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/timing.png)
-<p align="center"
 setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup<br>
 hold time: (Tcq+Tcomb)>(Thold+Tskew)<br>
