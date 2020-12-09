@@ -27,6 +27,6 @@ Synthetic library: Synopsys Designware的IP庫<br>
 <p align="center">
   - Tcq: clock觸發至Q成功將D鎖出的時間 (暫存器延遲)
   - Tskew: clock skew
-  - Tcomb: 組合邏輯運算時間
+  - Tcomb: 組合邏輯運算時間<br>
     setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup<br>
     hold time: (Tcq+Tcomb)>(Thold+Tskew)<br>
