@@ -21,14 +21,15 @@ Synthetic library: Synopsys Designware的IP庫<br>
   - setup time: edge到來前資料須穩定一段時間
   - hold time: edge觸發後資料須保持一段時間
   - metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
-## 約束:
-![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png)
-![Image](https://github.com/vita70579/VLSI/raw/main/Image/timing.png)
-Tcq: clock觸發至Q成功將D鎖出的時間 (暫存器延遲)<br>
-Tskew: clock skew<br>
-Tcomb: 組合邏輯運算時間<br>
-  - setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup:<br>
+## 約束: 暫存器到暫存器之間路徑的約束
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png)
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/timing.png)
+>Tcq: clock觸發至Q成功將D鎖出的時間 (暫存器延遲)<br>
+>Tskew: clock skew<br>
+>Tcomb: 組合邏輯運算時間<br>
+  >>- setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup:<br>
   以DFF1的p1時刻為基準，數據需要再DFF2的p3時刻滿足setup要求，那麼從p1時刻DFF1的值傳到DFF2的D端需要的時間為:(Tcq+Tcomb)，那麼對於DFF2而言下一個正緣來臨時刻相對於p1為(Tclk+Tcomb)。
-  - hold time: (Tcq+Tcomb)>(Thold+Tskew:)<br>
-  對於hold time，即是相對於DFF2的D端而言，p2時鐘沿來了之後，不要立刻影響到p3採到的數據，使得p3能正常的採得數據，而p2來臨之後，傳遞到D端時間還是(Tcq+Tcomb)。而這時要求至少在p3+hold以後才運算 完成，則需要D端至少保持(Thold + Tskew)這麼長的時間。
-  
+  >>- hold time: (Tcq+Tcomb)>(Thold+Tskew:)<br>
+  對於hold time，即是相對於DFF2的D端而言，p2時鐘沿來了之後，不要立刻影響到p3採到的數據，使得p3能正常的採得數據，而p2來臨之後，傳遞到D端時間還是(Tcq+Tcomb)。而這時要求至少在p3+hold以後才運算 完成，則需要D端至少保持(Thold + Tskew)這麼長的時間。<br>
+
+## 約束: 暫存器到暫存器之間路徑的約束
