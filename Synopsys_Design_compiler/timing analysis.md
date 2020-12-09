@@ -33,3 +33,5 @@ Synthetic library: Synopsys Designware的IP庫<br>
   對於hold time，即是相對於DFF2的D端而言，p2時鐘沿來了之後，不要立刻影響到p3採到的數據，使得p3能正常的採得數據，而p2來臨之後，傳遞到D端時間還是(Tcq+Tcomb)。而這時要求至少在p3+hold以後才運算 完成，則需要D端至少保持(Thold + Tskew)這麼長的時間。<br>
 ## 約束: 輸入端口到暫存器之間路徑的約束
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/block.png)
+>由於我們要合成的對象是灰色方塊中的組合邏輯N，但要分析其時序約束條件必須將外部的時序電路同時考慮進去:
+>- (Tclk+Tskew)-(Tcq+Tcomb_M+Tcomb_N) > Tsetup \rightarrow
