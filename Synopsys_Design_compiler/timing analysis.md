@@ -36,6 +36,10 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >由於我們要合成的對象是灰色方塊中的組合邏輯N，但要分析其時序約束條件必須將外部的時序電路同時考慮進去:
 >- 由方塊圖可以看出約束式: (Tclk+Tskew)-(Tcq+Tcomb_M+Tcomb_N) > Tsetup
 >- 因此我們可以推導出合成組合邏輯N的約束條件: (Tclk+Tskew)-(Tcq+Tcomb_M) > Tsetup+Tcomb_N，故DC會依照組合邏輯N的延遲條件優化。
->- 我們可以合理設置不確定時間(δ)以及指定Tskew與外部延遲(Tcq, Tcomb_M)，可以得到: Tsetup_max=Tclk+Tskew-(Tcq+Tcomb_M)-δ
+>- 我們可以合理設置不確定時間(δ)以及指定Tskew與外部延遲(Tcq, Tcomb_M)，可以得到: Tcomb_N_max=Tclk+Tskew-(Tcq+Tcomb_M)-δ-Tsetup
 ## 約束: 暫存器到輸出端口之間路徑的約束
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im3.png)<br>
+>由於我們要合成的對象是灰色方塊中的組合邏輯S，但要分析其時序約束條件必須將外部的時序電路同時考慮進去:
+>- 由方塊圖可以看出約束式: (Tclk+Tskew)-(Tcq+Tcomb_S+Tcomb_T) > Tsetup
+>- 因此我們可以推導出合成組合邏輯N的約束條件: (Tclk+Tskew)-(Tcq+Tcomb_T) > Tsetup+Tcomb_S，故DC會依照組合邏輯N的延遲條件優化。
+>- 我們可以合理設置不確定時間(δ)以及指定Tskew與外部延遲(Tcq, Tcomb_T)，可以得到: Tcomb_S_max=Tclk+Tskew-(Tcq+Tcomb_T)-δ-Tsetup
