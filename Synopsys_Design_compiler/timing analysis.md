@@ -24,9 +24,8 @@ Synthetic library: Synopsys Designware的IP庫<br>
 約束:<br>
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png)
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/timing.png)
-<p align="center">
-  - Tcq: clock觸發至Q成功將D鎖出的時間 (暫存器延遲)
-  - Tskew: clock skew
-  - Tcomb: 組合邏輯運算時間<br>
-    setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup<br>
-    hold time: (Tcq+Tcomb)>(Thold+Tskew)<br>
+- Tcq: clock觸發至Q成功將D鎖出的時間 (暫存器延遲)
+- Tskew: clock skew
+- Tcomb: 組合邏輯運算時間<br>
+  setup time: (Tclk+Tskew)-(Tcq+Tcomb)>Tsetup<br>
+  hold time: (Tcq+Tcomb)>(Thold+Tskew)<br>
