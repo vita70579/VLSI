@@ -49,3 +49,11 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >- time bugeting: 假設輸入和輸出「內部電路」各占用工作週期的40%
 >- 即:Tclk = Tcq+Tcomb_?+Tcomb_N+Tsetup (此處不考慮Tskew)
 >- 若Tcomb_?,N分別佔用工作週期的40%，則工作週期剩下的20%包含了Tcq,Tsetup，可以定義margin(餘量)為:20%Tclk-Tcq-Tsetup
+### 例子:
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im5.png)<br>
+因假設輸入/輸出內部電路佔40%Tclk (Tclk=10ns)，因此可以設定外部延遲為10-40%Tclk=6ns<br>
+>>>**create_clock -period 10 \[get-ports CLK]
+>>>set_input_delay -max 6 -clock CLK \[all_inputs]
+>>>remove_input_delay \[get ports CLK]
+>>>set_output_delay -max 6 -clock CLK \[all-putput]
+
