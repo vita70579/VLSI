@@ -23,3 +23,8 @@ Synthetic library: Synopsys Designware的IP庫<br>
   - metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
 >約束:<br>
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/DFF.png) 
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/timing.png)
+- setup time:
+(Tclk+Tskew)-(Tcq+Tcomb)>Tsetup
+- hold time:
+(Tcq+Tcomb)>(Thold+Tskew)
