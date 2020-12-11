@@ -100,5 +100,19 @@ Environmental constraint
 ># 連線延遲模型 (一般使用Wire Load Model):
 >> 1. 在相同工藝下計算出邏輯閘個數範圍內，負載fanout=1,2,3,...的連線平均長度，並且透過單位長度的電阻/電容/面積計算出延遲。<br>
 >> 2. 連接兩個不同模組的連線模型:
->>>- enclpdes: 較不悲觀的延遲估計，即兩模組之間的連線延遲估計以「包含著兩模組的上一層模組」的連線負載模型估計。
->>>- enclpdes: 較不悲觀的延遲估計，即兩模組之間的連線延遲估計以「頂層模組」的連線負載模型估計。
+>>>- enclpdes: 兩模組之間的連線延遲估計以「包含著兩模組的上一層模組」的連線負載模型估計。為較不悲觀的延遲估計。
+>>>- top: 即兩模組之間的連線延遲估計以「頂層模組」的連線負載模型估計。較悲觀的延遲估計。
+
+複雜的時序約束
+=============
+有些特別的路徑並不在一個cycle內完成。<br>
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im9.png)<br>
+>># setup check的設定
+>>因為單元要執行n個cycle，所以要在DFF觸發後的n個週期做setup check<br>
+>>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im10.png)<br>
+>>**加法器的最大允許延遲: Tadder = 6\*Tclk - Tcq - Tsetup - Tuncertainty**
+>># hold check的設定
+>>正常情況而言，正緣觸發時C讀取的應該是6 cycle前的運算結果，而不是1cycle前的運算結果(加法器算太快所致)。<br>
+>>- **在5 cycle後做hold check (電路複雜)**
+>>- **在第一個cycle就坐hold check (電路簡單)**
+>>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im11.png)<br>
