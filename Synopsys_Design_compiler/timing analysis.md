@@ -81,6 +81,7 @@ Time Constraint
 Environmental constraint
 ========================
 ># 設置環境約束
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im7.png)<br>
 >>- 設置驅動
 >>- 設置驅動最大電容
 >>- 設置線負載模型
