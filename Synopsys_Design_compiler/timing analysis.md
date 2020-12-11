@@ -106,7 +106,7 @@ Environmental constraint
 複雜的時序約束
 =============
 有些特別的路徑並不在一個cycle內完成。<br>
->![Image](https://github.com/vita70579/VLSI/raw/main/Image/im9.png)<br>
+>Ex. ![Image](https://github.com/vita70579/VLSI/raw/main/Image/im9.png)<br>
 >># setup check的設定
 >>因為單元要執行n個cycle，所以要在DFF觸發後的n個週期做setup check<br>
 >>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im10.png)<br>
