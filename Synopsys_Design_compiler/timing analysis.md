@@ -20,7 +20,7 @@ Timing analysis
   >>- 因此，timing path可以是輸入到暫存器/暫存器到暫存器/暫存器到輸出/輸入到輸出<br>
   >>- critical path: 最長的一條timing path。
   
-># TConstrain
+># Time Constrain
 >## 定義:
   >>- setup time: edge到來前資料須穩定一段時間
   >>- hold time: edge觸發後資料須保持一段時間
