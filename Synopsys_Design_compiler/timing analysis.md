@@ -25,6 +25,10 @@ Timing analysis
   >>- setup time: edge到來前資料須穩定一段時間
   >>- hold time: edge觸發後資料須保持一段時間
   >>- metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
+>## 定義:
+  >>- latency: clock到FF的CLK pin的延遲
+  >>- transition: 位準變化的延遲
+  >>- skew: clock到不同CLK pin之間的時間差
   
 >## 約束: 暫存器到暫存器之間路徑的約束
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im.png)
