@@ -113,5 +113,6 @@ Environmental constraint
 >>**加法器的最大允許延遲: Tadder = 6\*Tclk - Tcq - Tsetup - Tuncertainty**
 >># hold check的設定
 >>正常情況而言，正緣觸發時C讀取的應該是6 cycle前的運算結果，而不是1cycle前的運算結果(加法器算太快所致)。<br>
->>**- 在5 cycle後做hold check (電路複雜)
->>- 在第一個cycle就坐hold check (電路簡單)**
+>>- **在5 cycle後做hold check (電路複雜)**
+>>- **在第一個cycle就坐hold check (電路簡單)**
+>>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im11.png)<br>
