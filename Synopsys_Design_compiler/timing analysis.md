@@ -110,3 +110,8 @@ Environmental constraint
 >># setup check的設定
 >>因為單元要執行n個cycle，所以要在DFF觸發後的n個週期做setup check<br>
 >>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im10.png)<br>
+>>**加法器的最大允許延遲: Tadder = 6\*Tclk - Tcq - Tsetup - Tuncertainty**
+>># hold check的設定
+>>**正常情況而言，正緣觸發時C讀取的應該是6 cycle前的運算結果，而不是1cycle前的運算結果(加法器算太快所致)。
+>>1. 在5 cycle後做hold check (電路複雜)
+>>2. 在第一個cycle就坐hold check (電路簡單)**
