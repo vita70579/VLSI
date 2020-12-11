@@ -91,3 +91,8 @@ Environmental constraint
 >>- 假設輸入由驅動能力弱的負載單元驅動
 >>- 限制輸入的輸入電容
 >>- 估計輸出推動的模組數量
+
+># 設定工作條件 (set operating conditions)
+> 預設工作條件(nominal) 在.lib檔中有描述，若要在不同於nominal的電壓/溫度下工作則要另外設定。<br>
+>- 溫度/電壓/製程對延遲的影響:
+>![Image](https://github.com/vita70579/VLSI/raw/main/Image/im8.png)<br>
