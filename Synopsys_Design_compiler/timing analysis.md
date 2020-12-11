@@ -1,22 +1,25 @@
-TCL & Design compiler
-=====================
-# synthesis
+Fundation
+=========
+# Synthesis
   >synthesis=translation+logic optimization+gate mapping<br>
   >translation: HDL→GTECH (default library)<br>
   >gate mapping: GTECH→ddc (netlist(電路), .v(用於post-sim), .sdf(延遲訊息), .sdc(約束訊息))<br>
 
-# library
+# Library
 Technology library:<br>
   >1. Target library: 由半導體vendor提供的器件資源庫。<br>
   >2. Link library: 第三方IP庫,在合成時不轉換為標準單元,而是由vendor提供的模型來模擬真實行為。<br>
 Symbol library: 圖形庫<br>
 Synthetic library: Synopsys Designware的IP庫<br>
-# timing path
+
+Timing analysis
+===============
+# Timing path
   >起點: 輸入端口, 時鐘引腳<br>
   >終點: 輸出端口, 除了時鐘引腳外的其他輸入<br>
   >>- 因此，timing path可以是輸入到暫存器/暫存器到暫存器/暫存器到輸出/輸入到輸出<br>
   >>- critical path: 最長的一條timing path。
-# timing violation
+# Constrain
 ## 定義:
   - setup time: edge到來前資料須穩定一段時間
   - hold time: edge觸發後資料須保持一段時間
@@ -48,7 +51,7 @@ Synthetic library: Synopsys Designware的IP庫<br>
 >Tcomb_F=Tclk-Tinput_delay-Toutput_delay<br>
 >>**set_input_delay 0.4 -clock CLK -add_delay \[get_ports B]<br>
 >>set_output_delay 0.2 -clock CLK -add_delay \[get_ports D]<br>**
-# time bugeting (時間預算)
+## time bugeting (時間預算)
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im4.png)<br>
 >由於Soc電路較大，需要對設計進行劃分，但是各區塊的設計者往往無法得知其他區塊的輸入輸出delay，因此我們採用time bugeting的設計方法:
 >- time bugeting: 假設輸入和輸出「內部電路」各占用工作週期的40%
