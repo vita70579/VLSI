@@ -12,7 +12,7 @@ Technology library:<br>
 Symbol library: 圖形庫<br>
 Synthetic library: Synopsys Designware的IP庫<br>
 
-Timing analysis
+Time Constraint
 ===============
 ># Timing path
   >起點: 輸入端口, 時鐘引腳<br>
@@ -20,7 +20,7 @@ Timing analysis
   >>- 因此，timing path可以是輸入到暫存器/暫存器到暫存器/暫存器到輸出/輸入到輸出<br>
   >>- critical path: 最長的一條timing path。
   
-># Time Constrain
+># Time Constraint
 >## 定義:
   >>- setup time: edge到來前資料須穩定一段時間
   >>- hold time: edge觸發後資料須保持一段時間
@@ -78,3 +78,15 @@ Timing analysis
   >>>remove_input_delay \[get ports CLK]<br>
   >>>set_output_delay -max 6 -clock CLK \[all-putput]<br>**
 
+Environmental constraint
+========================
+># 設置環境約束
+>>- 設置驅動
+>>- 設置驅動最大電容
+>>- 設置線負載模型
+>>- 設置負載電容
+
+># Load Buget (負載預算):
+>>- 假設輸入由驅動能力弱的負載單元驅動
+>>- 限制輸入的輸入電容
+>>- 估計輸出推動的模組數量
