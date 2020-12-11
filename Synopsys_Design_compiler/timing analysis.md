@@ -84,7 +84,7 @@ Environmental constraint
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im7.png)<br>
 >>- 設置驅動
 >>- 設置驅動最大電容
->>- 設置線負載模型
+>>- 設置連線延遲模型
 >>- 設置負載電容
 
 ># Load Buget (負載預算):
@@ -94,5 +94,10 @@ Environmental constraint
 
 ># 設定工作條件 (set operating conditions)
 > 預設工作條件(nominal) 在.lib檔中有描述，若要在不同於nominal的電壓/溫度下工作則要另外設定。<br>
->- 溫度/電壓/製程對延遲的影響:
+>- 溫度/電壓/製程對延遲的影響:<br>
 >![Image](https://github.com/vita70579/VLSI/raw/main/Image/im8.png)<br>
+
+># 連線延遲模型 (一般使用Wire Load Model):
+>> 在相同工藝下計算出邏輯閘個數範圍內，負載fanout=1,2,3,...的連線平均長度，並且透過單位長度的電阻/電容/面積計算出延遲。<br>
+>> 連接兩個不同模組的連線模型:
+>>>- enclpdes: 較不悲觀的延遲估計，即兩模組之間的連線延遲估計以包含著兩模組的上一層模組的連線負載模型估計。
