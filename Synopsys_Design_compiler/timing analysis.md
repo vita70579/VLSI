@@ -122,3 +122,14 @@ Environmental constraint
 >> create_clock -period 10 [get_ports clk] <br>
 >> set_multicycle_path -setup 2 **-from** FFA/CP **-through** Multiply/Out **-to** FFB/D <br>
 >> set_multicycle_path -hold 1 **-from** FFA/CP **-through** Multiply/Out **-to** FFB/D <br>
+
+Area Constraint
+===============
+># 面積單位
+>>- 2-input-NAND-gete
+>>- Transistors
+>>- (um)^2
+># 設定
+>>- 不設定: DC做最小限度優化
+>>- 設定面積約數: 達標後結束
+>>- 0: 持續優化到收斂
