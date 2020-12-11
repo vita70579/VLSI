@@ -20,14 +20,16 @@ Timing analysis
   >>- 因此，timing path可以是輸入到暫存器/暫存器到暫存器/暫存器到輸出/輸入到輸出<br>
   >>- critical path: 最長的一條timing path。
   
-># Constrain
+># TConstrain
 >## 定義:
   >>- setup time: edge到來前資料須穩定一段時間
   >>- hold time: edge觸發後資料須保持一段時間
   >>- metastable: 在不滿足setup time與hold time的時間內對資料進行採樣而得到不可預期的結果
 >## 定義:
   >>- latency: clock到FF的CLK pin的延遲
-  >>- transition: 位準變化的延遲
+  >>>- clock source latency: 實際clock原點到設計對象(block)的延遲
+  >>>- network latency: block中clock起點到DFF的延遲
+  >>- transition: 位準變化的延遲 (電位20%~80%的時間)
   >>- skew: clock到不同CLK pin之間的時間差
   
 >## 約束: 暫存器到暫存器之間路徑的約束
