@@ -1,4 +1,4 @@
-Fundation
+Foundation
 =========
 ># Synthesis
   >synthesis=translation+logic optimization+gate mapping<br>
