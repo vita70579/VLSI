@@ -22,6 +22,7 @@ Assume a maximum setup time of 0.2ns for any register.
 Input ports (sequential logic)
 ==============================
 1. The maximum delay from ports data1 and data2 through the internal input logic S is 2.2ns. <br>
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/im14.png)<br>
 **Tclk - (Tcq + TA + Ts) > Tsetup <br>
 Tcq + TA < Tclk - Ts -Tsetup <br>
 (Tq + TA)max = Tclk - Ts -Tsetup -Tuncertainty**
