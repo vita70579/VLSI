@@ -25,5 +25,5 @@ Input ports (sequential logic)
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/im14.png)<br>
 **Tclk - (Tcq + TA + Ts) > Tsetup <br>
 Tcq + TA < Tclk - Ts -Tsetup <br>
-(Tq + TA)max = Tclk - Ts -Tsetup -Tuncertainty**
+Maximum input daley = (Tcq +TA)max = Tclk - Ts -Tsetup -Tuncertainty = 3.0 - 0.15 - 2.2 - 0.2 = 0.45ns**
 2. The latest F3 data arrival time at the sel ports is 1.4ns absolute time.
