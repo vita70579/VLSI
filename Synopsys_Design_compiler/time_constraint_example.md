@@ -1,3 +1,4 @@
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/im13.png)<br>
 Clock Definition
 ================
 1. Clock **clk** has a frequency of 333.33MHz.
@@ -18,9 +19,6 @@ Register setup time
 ===================
 Assume a maximum setup time of 0.2ns for any register.
 
-Block
-=====
-![Image](https://github.com/vita70579/VLSI/raw/main/Image/im13.png)
 Input ports (sequential logic)
 ==============================
 1. The maximum delay from ports data1 and data2 through the internal input logic S is 2.2ns.
