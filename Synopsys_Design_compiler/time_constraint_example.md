@@ -30,3 +30,9 @@ Maximum input daley = (Tcq +TA)max = Tclk - Ts -Tsetup -Tuncertainty = 3.0 - 0.1
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/im15.png)<br>
 - **absolute time = source latency + network leatency + Tcq + TB**
 - **input delay = Tcq + TB = absolute time - source latency - network latency = 1.4 - 0.7 - 0.3 = 0.4ns**
+
+Output ports (sequential logic)
+===============================
+1. The maximum delay of the external combo logic at port out is 420ps; F6 has a setup time of 80ps.
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/im16.png)<br>
+  - virtual clock: clk to F6
