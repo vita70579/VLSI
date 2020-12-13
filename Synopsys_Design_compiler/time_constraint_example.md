@@ -26,4 +26,7 @@ Input ports (sequential logic)
 **Tclk - (Tcq + TA + Ts) > Tsetup <br>
 Tcq + TA < Tclk - Ts -Tsetup <br>
 Maximum input daley = (Tcq +TA)max = Tclk - Ts -Tsetup -Tuncertainty = 3.0 - 0.15 - 2.2 - 0.2 = 0.45ns**
-2. The latest F3 data arrival time at the sel ports is 1.4ns absolute time.
+2. The latest F3 data arrival time at the sel ports is 1.4ns absolute time. <br>
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/im15.png)<br>
+- **absolute time = source latency + network leatency + Tcq + TB**
+- **input delay = Tcq + TB = absolute time - source latency - network latency = 1.4 - 0.7 - 0.3 = 0.4ns**
