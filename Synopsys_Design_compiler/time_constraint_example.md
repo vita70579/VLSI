@@ -43,4 +43,9 @@ Output ports (sequential logic)
 >- **Tclk - (Tcq + TV) - TD > Tsetup <br>
 TD + Tsetup < Tclk - (Tcq + TV) <br>
 Maximum output delay = (TD + Tsetup)max = Tclk - maximum internal delay - Tuncertainty = 3 - 0.81 - 0.15 = 2.04ns**
+3. The out3 port has a 400ps setup time requirement with respect to its capturing register clock pin.
+- **output delay = 0.4ns**
 
+Combinational logic
+===================
+The maximum delay from Cin1 and Cin2 to Cout is 2.45ns. (Hint:Use appropriate input and output delay constraints with respect to clock clk)
