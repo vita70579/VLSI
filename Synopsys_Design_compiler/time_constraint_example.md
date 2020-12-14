@@ -33,10 +33,8 @@ Maximum input daley = (Tcq +TA)max = Tclk - Ts -Tsetup -Tuncertainty = 3.0 - 0.1
 
 Output ports (sequential logic)
 ===============================
-1. The maximum delay of the external combo logic at port out is 420ps; F6 has a setup time of 80ps.<br>
-![Image](https://github.com/vita70579/VLSI/raw/main/Image/im16.png)<br>
->- **virtual clock: clk to F6**
->- **Maximum output delay: 0.42 + 0.8 = 0.5ns**
+1. The maximum delay of the external combo logic at port out1 is 420ps; F6 has a setup time of 80ps.<br>
+>- **output delay: 0.42 + 0.8 = 0.5ns**
 2. The maximum internal delay to out2 is 810ps.<br>
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/im17.png)<br>
 >- **virtual clock: clk to F6**
@@ -48,4 +46,8 @@ Maximum output delay = (TD + Tsetup)max = Tclk - maximum internal delay - Tuncer
 
 Combinational logic
 ===================
-The maximum delay from Cin1 and Cin2 to Cout is 2.45ns. (Hint:Use appropriate input and output delay constraints with respect to clock clk)
+The maximum delay from Cin1 and Cin2 to Cout is 2.45ns. (Hint:Use appropriate input and output delay constraints with respect to clock clk) <br>
+>- **Hint:Use appropriate input and output delay constraints with respect to clock clk (virtual clock: clk to F6)**
+>- **Tclk - (Tcq + TC + Tcombo + TE) > Tsetup <br>
+Maximum input delay = (Tcq + TC)max = Tclk - Tcombo - TE -Tsetup - Tuncertainty = Tclk - Tcomb - Maximum output delay - Tuncertainty <br>
+then Maximum input delay + Maximum output delay = 3 - 2.45 - 0.15 = 0.4ns**
