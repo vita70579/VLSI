@@ -46,6 +46,7 @@ Maximum output delay = (TD + Tsetup)max = Tclk - maximum internal delay - Tuncer
 Combinational logic
 ===================
 The maximum delay from Cin1 and Cin2 to Cout is 2.45ns. (Hint:Use appropriate input and output delay constraints with respect to clock clk) <br>
+![Image](https://github.com/vita70579/VLSI/raw/main/Image/im16.png)<br>
 >- **Hint:Use appropriate input and output delay constraints with respect to clock clk (virtual clock: clk to F6)**
 >- **Tclk - (Tcq + TC + Tcombo + TE) > Tsetup <br>
 Maximum input delay = (Tcq + TC)max = Tclk - Tcombo - TE -Tsetup - Tuncertainty <br>
