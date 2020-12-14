@@ -37,7 +37,6 @@ Output ports (sequential logic)
 >- **output delay: 0.42 + 0.8 = 0.5ns**
 2. The maximum internal delay to out2 is 810ps.<br>
 ![Image](https://github.com/vita70579/VLSI/raw/main/Image/im17.png)<br>
->- **virtual clock: clk to F6**
 >- **Tclk - (Tcq + TV) - TD > Tsetup <br>
 TD + Tsetup < Tclk - (Tcq + TV) <br>
 Maximum output delay = (TD + Tsetup)max = Tclk - maximum internal delay - Tuncertainty = 3 - 0.81 - 0.15 = 2.04ns**
