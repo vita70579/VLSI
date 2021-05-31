@@ -4,3 +4,4 @@ VLSI theory
 - MOS元件特性
 - 時序分析
 - Synopsys Design compiler
+- SystemVerilog
