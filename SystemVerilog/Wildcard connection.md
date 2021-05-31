@@ -11,7 +11,7 @@ assign c = a + b;
 endmodule
 ```
 
-## 2 Wildcard connection
+## Wildcard connection
 ```verilog
 logic [3:0] b, c;
 //logic [4:0] c;
