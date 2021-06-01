@@ -1,6 +1,7 @@
 # always_comb中的控制語句：case
 
-## `unique case`:並行比較
+## `unique case`
+並行比較
 ```verilog
 always_comb begin
     b = 1'b0;
@@ -16,7 +17,8 @@ always_comb begin
     endcase
 end
 ```
-## `priority case`:順序比較:=if...else...
+## `priority case`
+順序比較:=if...else...
 ```verilog
 always_comb begin
     priority case (1'b1)
