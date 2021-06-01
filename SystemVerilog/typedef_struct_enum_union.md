@@ -159,3 +159,8 @@ logic [31:0] addr, aluout;
 assign addr = res.memory.addr; // assign addr = res[32:1] (線路複用)
 assign aluout = res.alu.aluout; // assign aluout = res[31:0] (線路複用)
 ```
+| logic 32 | logic 31 | ........ | logic 0 |
+|--------- |--------- |----------| --------|
+   `zero`               `aluout`
+   `branch_taken`       `pcbranch`
+   `addr`               `mem_read`
