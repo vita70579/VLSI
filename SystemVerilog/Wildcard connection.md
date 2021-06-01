@@ -1,4 +1,4 @@
-# Wildcard connection
+# `Wildcard connection`
 
 ```verilog
 module adder (
