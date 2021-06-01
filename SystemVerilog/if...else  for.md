@@ -1,4 +1,4 @@
-## If
+## `If`
 ```verilog
 always_comb begin
     b = 1'b0;
@@ -10,9 +10,9 @@ always_comb begin
     end
 end
 ```
-## For
-`for`在always_comb中，會被展開。
-`for`相关的语句：`break`，`continue`
+## `For`
+1. for在always_comb中，會被`展開`。
+2. for相關的語句：`break`，`continue`
 ```verilog
 logic [15:0]a;
 logic [3:0] b;
