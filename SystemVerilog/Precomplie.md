@@ -42,7 +42,8 @@ logic a[`LINES-1:0];
       + d
       #endif
     ;
-    
+    ```
+    ```verilog
     generate if (D_INSIDE) begin
       assign a = b + c + d;
     end else begin
