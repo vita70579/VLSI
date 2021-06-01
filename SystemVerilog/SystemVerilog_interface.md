@@ -39,10 +39,10 @@ module top();
     module_name instance_name(.variable_name(intf_inst.modport_name1));
     
     interface_name intf_inst2(.d(), .e());
+    ...
 endmodule
 ```
 
-把interface的声明放到头文件里，可以大幅减少源代码量。
-
-Verilator暂不支持interface语法。
+* interface的宣告放到header file裡,可以大幅減少代碼量。
+* Verilator暫不支持interface語法。
 
