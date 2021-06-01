@@ -1,6 +1,6 @@
-# always_comb
+# `always_comb`
 
-always_comb:= combinational circuit, multi assign statement
+always_comb:= `combinational circuit` `multi assign statement`
 
 ```verilog
 always_comb begin
@@ -25,6 +25,3 @@ end
       b = 1'b0;
   end
   ```
-
-* Blocking
-always_comb内部允许if，case等控制语句。
